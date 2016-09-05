@@ -1,14 +1,19 @@
+{% load static %}
 <!doctype html>
 
-<html lang="en">
+<html lang="en" ng-app="Books">
     <head>
         <meta charset="utf-8">
         <title>Moonshot Books</title>
-        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script src="{% static "books/js/app.js" %}"></script>
     </head>
-
+    {% verbatim %}
     <body>
-        BOOKS
+        <div ng-view>
+        </div>
     </body>
+    {% endverbatim %}
 </html>

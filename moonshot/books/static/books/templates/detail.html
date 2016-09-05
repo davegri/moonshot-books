@@ -1,0 +1,39 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Author</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{book.id}}</td>
+                <td>
+                    <input type="text" name="author" placeholder="author" ng-model="book.author">
+                </td>
+                <td>
+                    <input type="text" name="title" placeholder="title" ng-model="book.title">
+                </td>
+                <td>
+                    <input type="text" name="description" placeholder="description" ng-model="book.description">
+                </td>
+                <td>
+                    <button type="button" class="button primary" ng-click="submitForm()">
+                        Update
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="button alert" ng-click="delete()">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>

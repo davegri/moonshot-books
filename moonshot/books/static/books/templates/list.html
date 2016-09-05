@@ -1,0 +1,38 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="book in books" ng-click="navigate('/book/' + book.id + '/')">
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <form novalidate>
+                    <td>
+                        <input type="text" name="author" placeholder="author" ng-model="formData.author">
+                    </td>
+                    <td>
+                        <input type="text" name="title" placeholder="title" ng-model="formData.title">
+                    </td>
+                    <td>
+                        <input type="text" name="description" placeholder="description" ng-model="formData.description">
+                    </td>
+                    <td>
+                        <button class="button" type="submit" ng-click="submitForm()">
+                            Add
+                        </button>
+                    </td>
+                </form>
+            </tr>
+        </tfoot>
+    </table>
+</div>
