@@ -7,3 +7,7 @@ from .serializers import BookSerializer
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+def IndexView(request):
+    books = Book.objects.all()
+    return render(request, 'books/index.html', {'books' : books})
